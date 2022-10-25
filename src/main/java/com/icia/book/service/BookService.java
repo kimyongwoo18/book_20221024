@@ -33,4 +33,9 @@ public class BookService {
     public List<BookDTO> findAll() {
         return bookRepository.findAll();
     }
+
+    public BookDTO findBookId(Long bookid) {
+
+        return bookRepository.findBookId(bookid);
+    }
 }

@@ -17,7 +17,7 @@ ${result}<br>
     DB에서 nookid가 2번인 책을 select
     findBook.jsp에 해당 정보 출력--%>
 <a href="/save">도서저장</a><br>
-<a href="/findBook">2번책 조회</a>
-<a href="/books">책 조회</a>
+<a href="/findBook">2번책 조회</a><br>
+<a href="/books">책 조회</a><br>
 </body>
 </html>

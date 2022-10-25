@@ -21,10 +21,18 @@
         <th>가격</th>
         <th>출판사</th>
     </tr>
+    <%--책 제목을 클릭하면 /book 이라는 주소로 클릭한 책의 boolId를 전달
+        /book?bookId=1
+
+        /book 주소를 처리하는 Controller 메서드 정의
+        findBook.jsp에 해당 책 정보 출력
+        --%>
 <c:forEach items="${bookList}" var="book">
     <tr>
         <td>${book.bookId}</td>
-        <td>${book.bookName}</td>
+        <td>
+            <a href="/book?bookId=${book.bookId}">${book.bookName}</a>
+        </td>
         <td> ${book.bookAuthor}</td>
         <td> ${book.bookPrice}</td>
         <td> ${book.bookPublisher}</td>
