@@ -29,4 +29,11 @@ public class BookController {
 
         return "index";
     }
+    @GetMapping("/findBook")
+    public String findBook(Model model) {
+        BookDTO findResult = bookService.findBook();
+        //특정 id책의 전체정보이기 때문에 DTO로 받는다.
+        model.addAttribute("book", findResult);
+        return "findBook";
+    }
 }

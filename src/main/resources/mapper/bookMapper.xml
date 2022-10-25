@@ -10,4 +10,7 @@
         insert into book_table1(bookName, bookAuthor, bookPrice, bookPublisher) values(#{bookName},#{bookAuthor},#{bookPrice},#{bookPublisher})
     </insert>
 
+    <select id="findBook" resultType="bookDTO">
+        select * from book_table1 where bookId=2
+    </select>
 </mapper>
