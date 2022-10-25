@@ -13,4 +13,9 @@
     <select id="findBook" resultType="bookDTO">
         select * from book_table1 where bookId=2
     </select>
+
+    <select id="findAll" resultType="bookDTO">
+        select * from book_table1
+    </select>
+
 </mapper>

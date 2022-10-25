@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 @Controller
 public class BookController {
     @Autowired
@@ -35,5 +37,11 @@ public class BookController {
         //특정 id책의 전체정보이기 때문에 DTO로 받는다.
         model.addAttribute("book", findResult);
         return "findBook";
+    }
+    @GetMapping("/books")
+    public String findAll(Model model) {
+        List<BookDTO> bookList = bookService.findAll();
+        model.addAttribute("bookList", bookList);
+        return "bookList";
     }
 }

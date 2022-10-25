@@ -5,6 +5,8 @@ import com.icia.book.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class BookService {
 
@@ -26,5 +28,9 @@ public class BookService {
         BookDTO findResult = bookRepository.findBook();
         return findResult;
 
+    }
+
+    public List<BookDTO> findAll() {
+        return bookRepository.findAll();
     }
 }

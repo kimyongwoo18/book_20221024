@@ -18,5 +18,6 @@ ${result}<br>
     findBook.jsp에 해당 정보 출력--%>
 <a href="/save">도서저장</a><br>
 <a href="/findBook">2번책 조회</a>
+<a href="/books">책 조회</a>
 </body>
 </html>
